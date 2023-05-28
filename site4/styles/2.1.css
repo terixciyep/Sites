@@ -1,0 +1,295 @@
+@font-face {
+    font-family: "Caviar Dreams";
+    src: url(../fonts/CaviarDreams.ttf);
+}
+@font-face {
+    font-family: "Caviar Dreams";
+    src: url(../fonts/Caviar_Dreams_Bold.ttf);
+    font-weight: bold;
+}
+@font-face {
+    font-family: "Caviar Dreams";
+    src: url(../fonts/CaviarDreams_BoldItalic.ttf);
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Caviar Dreams";
+    src: url(../fonts/CaviarDreams_Italic.ttf);
+     font-style: italic;
+}
+@keyframes navlinks {
+    60% {color: black;}
+    100% {
+        color: darksalmon;
+        transform: translateX(10px);
+    }
+}
+@keyframes posframe{
+    0% {background-color: yellow}
+    33% {transform: translateY(-60pt);}
+    100% {transform: translateY(-60pt);}
+}
+
+header, nav, main, footer {position: fixed;}
+
+body {
+margin: 0px;
+font-family: Arial;
+height: 100vh;}
+
+header {
+    background-color: white;
+    height: 80pt;
+    left: 0pt;
+    top: 0pt;
+    right: 0pt;
+}
+
+
+main {
+    padding-right: 10px;
+    padding-left: 10px;
+    text-align: justify;
+    left: 190px;
+    top: 100pt;
+    right: 0pt;
+    bottom: 120pt;
+    background-image:repeating-linear-gradient(to right, white 0%, bisque 1%, white 2%);
+    overflow:auto;
+}
+* {box-sizing :border-box;}
+footer {
+    text-align: right;
+}
+
+
+p {
+    font-size: 14pt !important;
+}
+
+}
+p.greeting {font-size:24pt;}
+.advertising {margin-left:35pt;}
+
+.advertising div{
+    font-size: 12pt;
+    margin-top: 5pt;
+    margin-bottom: 5pt;
+}
+
+.bigger {font-size: 14pt;}
+
+table.pricelist th, table.pricelist td {
+    border: grey thin solid;
+    padding: 4px;
+}
+
+table.catalog {
+    border-collapse: collapse;
+    width: 70%;
+    min-width: 12cm;
+}
+table.catalog tr:first-child p {
+    width: 50%;
+}
+table.catalog td img {
+    width: 100%;
+}
+
+table.catalog td {
+    border-top: black thin dotted;
+    border-bottom: black thin dotted;
+    padding: 10px;
+}
+
+
+table.catalog tr:first-child td {border-top: none;}
+table.catalog tr:last-child td {border-bottom: none;}
+
+table.catalog td p:first-of-type::first-letter {font-size: 24pt;}
+
+
+table.catalog img {width: 200px;}
+
+table.pricelist thead th {
+    text-align: center;
+    color: white;
+    background-color: grey;
+}
+
+table.pricelist tfoot td {
+    width: 200px;
+    text-align: right;
+    font-style: italic
+}
+
+nav {
+    width: 150px;
+    padding: 10px;
+    left: 0pt;
+    top: 100pt;
+    bottom: 120pt;
+    background-color: rgba(255, 255, 255, 0.7);
+    background-color: bisque;
+}
+
+nav div, nav a {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size:20pt
+}
+
+th[colspan] {text-align: center;}
+
+table.pricelist tbody tr td:last-child:not(:only-child) {
+    border:none;
+    background-color: lightgrey;
+}
+
+table.catalog h3 {
+    font-family: "Caviar Dreams";
+    font-size: 20pt;
+}
+table.catalog h3::after {
+    content: ":";
+}
+
+
+body h3 {
+    font-variant:small-caps;
+    letter-spacing: 2pt;
+}
+body h3::first-letter {
+    text-transform: capitalize;
+}
+body table.catalog td p:first-letter {
+    vertical-align:top;
+}
+
+
+footer {
+    text-align: right;
+    background-color: white;
+    height: 120pt;
+    left: 0pt;
+    bottom: 0pt;
+    right: 0pt;
+}
+
+ol {list-style-type: upper-roman;}
+
+nav a:link, nav a:visited {
+    color:darkgrey;
+    text-decoration: none;
+}
+nav a:active, nav a:hover {
+    text-decoration: none;
+    animation-name: navlinks;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    transform: translateX(10px);
+}
+
+form {
+    width: 400px;
+    padding: 0px 10px;
+    border: thin darkgrey dotted;
+    border-radius:5px;
+}
+
+
+button[type=submit] {
+    border-style: none;
+    background: #fff;
+}
+
+input:focus {
+    background: yellow;
+}
+input:valid {
+    border: thin solid green;
+}
+input:invalid {
+    border: thin solid red;
+    background: red;
+}
+input[type=submit] {
+    font: bold 20pt Verdana;
+    text-transform: uppercase;
+    width: 250px;
+    border: thick solid black;
+    border-radius: 0px;
+}
+.pos1, .pos2, .pos3, .pos4, .pos5 {
+    position: absolute;
+}
+.pos1 {
+    left: 0pt;
+    top: 0pt;
+    width: 140pt;
+}
+.pos2 {
+    left: 140pt;
+    top: 29pt;
+    right: 0pt;
+}
+
+.pos3 {
+    left: 140pt;
+    top: 4pt;
+    right: 70pt;
+}
+.pos4 {
+    top: 0pt;
+    right: 20pt;
+}
+.pos5 {
+    top: 30pt;
+    left: 30pt;
+    width: 100pt;
+    font-style: Verdana;
+    font-weight: bold;
+    animation-delay:2s;
+    animation-name:posframe;
+    animation-duration:1.5s;
+    animation-direction: alternate;
+    animation-iteration-count:infinite
+
+}
+.pos5:hover, .pos5:active {
+    animation-play-state:paused;
+}
+.pos5 p {text-align: center;}
+.pos5 a:link, .pos5 a:visited {
+    color:black;
+}
+.pos5 a:active, .pos5 a:hover {
+    color: black;
+}
+.pos3 h1 {
+    font: bold 24pt Verdana;
+    text-transform: uppercase;
+    text-align: right;
+    letter-spacing: 6pt;
+    margin: 0px;
+    color: darksalmon;
+}
+.pos1 img {height: 80pt;}
+.pos2 h1 {
+    font: bold italic 42pt Verdana;
+    text-transform: uppercase;
+    text-align: right;
+    letter-spacing: 10pt;
+    margin: 0px;
+    background-color: darksalmon;
+}
+div#tablecont {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+}
+div#tablecont > div {display: table-row;}
+div#tablecont > div > * {display: table-cell; vertical-align: top;}
+
+nav a { display: block;}
