@@ -1,0 +1,156 @@
+@keyframes albwers{
+    0%{transform:translateY(-5pt) rotate(3deg);}
+    100%{transform: translateY(0pt) rotate(0deg);}
+}
+
+body {
+    margin: 0px;
+    counter-reset: ca;
+    background-image: url(../media/bg1.jpg), url(../media/bg2.jpg), url(../media/bg3.jpg), url(../media/main_bg.jpg);
+    background-size: 60pt, 60pt, 60pt, cover;
+    background-attachment: fixed;
+    background-position: 10pt 8pt, 10pt 80pt, 10pt 158pt,  center;
+    background-repeat: no-repeat;
+}
+nav {
+    margin: 10px 10px 10px 80pt;
+    padding: 5px;
+    border: 4px solid grey;
+    font: 16pt Arial, sans-serif;
+    display: flex;
+    justify-content: space-around;
+}
+nav a {display: block;}
+nav a:link, nav a:visited {
+    color: blue;
+    background-color: white;
+    text-decoration: none;
+    transition-duration: 1s;
+}
+nav div {
+    color: white ;
+    background-color: grey;
+}
+nav a:active, nav a:hover {
+    color: white;
+    background-color: blue;
+    text-decoration: none;
+    transform: scale(1.2, 1.2) translateY(4px);
+    transition-duration: 0.5s;
+}
+
+header h1 {
+    font: bold 42pt Verdana, sans-serif;
+    text-align: center;
+    color: white;
+    background-image: radial-gradient(closest-side at 25pt 50%, black, white, black, white, black);
+    margin: 8pt 8pt 0pt 80pt;
+    transform: skewX(5deg);
+}
+a::before {
+    counter-increment: ca;
+    content: counter(ca) ". ";
+}
+.gallery-item {width:100%}
+body.no_scroll {overflow: hidden;}
+a[target=gallery] {font-size: 22pt;}
+
+main p {font: 12pt Arial, sans-serif}
+main{
+    margin-left: 80pt;
+    padding-left: 20pt;
+    padding-right: 10pt;
+    border-left-width: 20pt;
+    border-left-style: solid;
+    border-left-color: grey;
+}
+
+div.tbl {display: table}
+
+div.tbl > div {display: table-row}
+
+div.tbl > div > * {
+    display: table-cell;
+    vertical-align: middle;
+}
+.h2p {font-weight: bold;}
+
+.vidmult {display: block;
+margin: 10px;}
+
+aside {
+    float: right;
+    margin: 20px 0px 20px 20px;
+    padding: 5px;
+    color: white;
+    background-color: black;
+    text-align: center;
+}
+div#discography {display: flex; flex-wrap:wrap; justify-content: space-between;}
+
+div#discography > div {
+    width: 120px;
+    background-color: white;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+}
+
+footer{text-align: right; position: relative;}
+
+.pos4 {
+    position: absolute;
+    top: 0pt;
+    right: 20pt;
+}
+
+div#discography div {
+    transform: skewX(5deg);
+    animation-name:albwers;
+    animation-duration: 0.3s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+div#discography div:hover {
+    transform: skewX(10deg) translateY(-10px);
+    animation-play-state:paused;
+}
+@media screen and (max-width: 400px) {
+    body {background: transparent;}
+    header h1, nav, main, footer {margin-left: 0pt;}
+    header h1 {
+        font-size: 28pt;
+        background: black;
+    }
+    nav {flex-direction: column;}
+    main {
+        padding-left: 0pt;
+        border-left: none;
+    }
+    nav a:active, nav a:hover {
+        transform: translateY(4px);
+    }
+    div#discography div {
+        border: 2px solid rgb(0,0,0);
+    }
+    iframe {
+        width:100%;
+    }
+    body nav {
+        position: flex;
+    }
+}
+@media print {
+    body {background: transparent;}
+    nav {display: none;}
+    header h1, main, footer {margin-left: 0pt;}
+    header, footer {background: transparent}
+    main {
+        padding-left: 0pt ;
+        border-left: none;
+    }
+    header h1, footer p {color: black;}
+    header h1 {letter-spacing: 10pt;}
+    footer {border-top: 1px solid black;}
+}
